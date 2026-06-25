@@ -1,7 +1,4 @@
-/**
- * Cheque
- * Represents a cheque with all its attributes
- */
+
 public class Cheque {
     private String chequeNumber;
     private String accountNumber;
@@ -20,7 +17,6 @@ public class Cheque {
         this.signatureStatus = signatureStatus;
     }
 
-    // Getters
     public String getChequeNumber() {
         return chequeNumber;
     }
@@ -45,7 +41,6 @@ public class Cheque {
         return signatureStatus;
     }
 
-    // Setters
     public void setChequeNumber(String chequeNumber) {
         this.chequeNumber = chequeNumber;
     }
