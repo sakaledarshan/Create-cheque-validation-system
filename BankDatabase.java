@@ -1,22 +1,14 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * BankDatabase
- * Simulates a bank database with account information and balances
- */
 public class BankDatabase {
     private Map<String, Account> accounts;
 
     public BankDatabase() {
-        // Initialize with some sample accounts
         accounts = new HashMap<>();
         initializeSampleAccounts();
     }
-
-    /**
-     * Initialize sample accounts for testing
-     */
+    
     private void initializeSampleAccounts() {
         // Add sample accounts with various balances
         accounts.put("12345678", new Account("12345678", "John Smith", 50000.00));
@@ -27,32 +19,20 @@ public class BankDatabase {
         accounts.put("99887766", new Account("99887766", "Diana Prince", 35000.00));
     }
 
-    /**
-     * Check if an account exists
-     */
     public boolean accountExists(String accountNumber) {
         return accounts.containsKey(accountNumber);
     }
 
-    /**
-     * Get account balance
-     */
     public double getBalance(String accountNumber) {
         Account account = accounts.get(accountNumber);
         return account != null ? account.getBalance() : 0.0;
     }
 
-    /**
-     * Get account holder name
-     */
     public String getAccountHolderName(String accountNumber) {
         Account account = accounts.get(accountNumber);
         return account != null ? account.getHolderName() : null;
     }
 
-    /**
-     * Display all accounts (for debugging)
-     */
     public void displayAllAccounts() {
         System.out.println("Available Accounts:");
         for (Map.Entry<String, Account> entry : accounts.entrySet()) {
@@ -62,9 +42,6 @@ public class BankDatabase {
         }
     }
 
-    /**
-     * Inner class representing a bank account
-     */
     private static class Account {
         private String accountNumber;
         private String holderName;
